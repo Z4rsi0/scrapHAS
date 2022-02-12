@@ -6,4 +6,5 @@ url = 'https://www.has-sante.fr/jcms/c_2608425/fr/ue-2-de-la-conception-a-la-nai
 response = requests.get(url)
 
 if response.ok:
-    print(response.headers)
+    soup = BeautifulSoup(response.text)
+    print(soup)
