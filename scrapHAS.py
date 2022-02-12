@@ -7,5 +7,5 @@ response = requests.get(url)
 
 if response.ok:
     soup = BeautifulSoup(response.text, 'lxml')
-    for link in soup.select('div.wysiwyg ul li a[href]'):
+    for link in soup.select('div.encart div.wysiwyg ul li a[href]'):
         print(link['href'])
